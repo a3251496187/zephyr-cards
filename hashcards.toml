@@ -1,0 +1,18 @@
+# Hashcards collection settings. Shared by every device and by `hc`.
+# Device preferences (theme, haptics) stay on the device.
+
+[review]
+new_per_day = 10              # 不要一次灌太多；学完新模块当天追加 5~10 张即可
+desired_retention = 0.9       # 目标留存率 90%，FSRS 按这个排下次到期
+fuzz = true                   # 把同一批学的卡摊到相邻几天，避免某天爆量
+
+[decks]
+# Globs. One without a "/" matches a file name at any depth.
+include = ["**/*.md"]
+exclude = ["README.md", "AGENTS.md", "CLAUDE.md"]
+
+# A group of decks can have its own new cards per day, within new_per_day
+# above. A deck counts in the first group whose globs match it.
+# [limits.languages]
+# decks = ["languages/**"]
+# new_per_day = 5
